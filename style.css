@@ -1,0 +1,246 @@
+/* Minimal, clean styling for paper demo pages */
+
+:root {
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --text: #111827;
+  --muted: #4b5563;
+  --border: rgba(17, 24, 39, 0.12);
+  --accent: #2563eb;
+  --shadow: 0 12px 28px rgba(17, 24, 39, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
+    "Segoe UI Emoji";
+  line-height: 1.5;
+  color: var(--text);
+  background: radial-gradient(1100px 650px at 20% 0%, rgba(37, 99, 235, 0.10), transparent 60%),
+    radial-gradient(900px 600px at 80% 10%, rgba(99, 102, 241, 0.08), transparent 55%), var(--bg);
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.95em;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 16px 44px;
+}
+
+.hero {
+  padding: 10px 4px 18px;
+  text-align: center;
+}
+
+.paper-title {
+  margin: 0;
+  font-size: 32px;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+.card {
+  margin-top: 16px;
+  padding: 18px 18px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  box-shadow: var(--shadow);
+  border-radius: 14px;
+}
+
+h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+
+.hint {
+  margin: 0 0 12px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.abstract {
+  margin: 0 auto;
+  color: var(--text);
+  text-align: center;
+  max-width: 85ch;
+}
+
+.image-placeholder {
+  border: 1px dashed rgba(17, 24, 39, 0.22);
+  border-radius: 12px;
+  background: rgba(17, 24, 39, 0.03);
+  min-height: 260px;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+}
+
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  justify-items: center;
+}
+
+.screenshot {
+  margin: 0;
+  width: min(980px, 100%);
+}
+
+.screenshot img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 26px rgba(17, 24, 39, 0.12);
+}
+
+.screenshot figcaption {
+  margin-top: 8px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.placeholder-inner {
+  text-align: center;
+  max-width: 680px;
+}
+
+.placeholder-title {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.placeholder-hint {
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.placeholder-filename {
+  color: var(--muted);
+}
+
+.table-scroll {
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.audio-table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  table-layout: fixed;
+}
+
+.audio-table col.col-type {
+  width: 170px;
+}
+
+.audio-table col.col-transcript {
+  width: 260px;
+}
+
+.audio-table col.col-audio {
+  width: 200px;
+}
+
+.audio-table thead th {
+  text-align: left;
+  font-weight: 700;
+  padding: 12px 10px;
+  background: rgba(37, 99, 235, 0.10);
+  border-bottom: 1px solid var(--border);
+  white-space: normal;
+  word-break: break-word;
+}
+
+.audio-table tbody th,
+.audio-table tbody td {
+  padding: 8px 8px;
+  border-bottom: 1px solid rgba(17, 24, 39, 0.08);
+  vertical-align: middle;
+  overflow-wrap: anywhere;
+}
+
+.audio-table tbody th {
+  font-weight: 650;
+  color: var(--text);
+  white-space: normal;
+}
+
+.audio-table tbody tr:hover td,
+.audio-table tbody tr:hover th {
+  background: rgba(17, 24, 39, 0.03);
+}
+
+audio {
+  width: 160px;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.audio-table audio {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  min-width: 180px;
+}
+
+.transcript {
+  min-width: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.35;
+  hyphens: auto;
+}
+
+.footer {
+  margin-top: 18px;
+  color: var(--muted);
+  padding: 0 2px;
+  text-align: center;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+@media (max-width: 560px) {
+  .paper-title {
+    font-size: 26px;
+  }
+
+  .card {
+    padding: 16px 14px;
+  }
+
+  .image-placeholder {
+    min-height: 220px;
+  }
+}
+
